@@ -20,6 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('', function (Request $request) {
 
-    return $request->all();
+    $data =  $request->all();
+    return view('welcome',compact('data'));
+
 
 });
